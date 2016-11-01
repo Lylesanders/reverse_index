@@ -10,10 +10,16 @@ class Array
 		reverse_array
 	end #my_reverse
 	
+	def my_index(element)
+		result = 0
 
-end # class
+		 self.each_with_index do|value, index|
+			if value == element
+				result = index
+				# break
+			end # if
+		end # each with index do
+		result
+	end # my_index
 
-def my_index()
-	nil
-end
-
+end #class
