@@ -10,7 +10,7 @@ class Array
 		reverse_array
 	end #my_reverse
 	
-	def my_index(element)
+	def my_rindex(element)
 		result = 0
 
 		 self.each_with_index do|value, index|

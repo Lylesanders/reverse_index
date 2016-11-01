@@ -17,20 +17,27 @@ class TestMyReverse < Minitest::Test  	#create template for test
 		assert_equal(["B","A"], array.my_reverse())
 	end # test_reverse_of_small_array
 
-	def test_my_index_for_empty_array
+	def test_my_rindex_for_empty_array
 		array = []
-		assert_equal(nil, array.my_index("a"))
-	end # test_my_index_for_empty_array
+		assert_equal(0, array.my_rindex("a"))
+	end # test_my_rindex_for_empty_array
 
-	def test_of_my_index_a
+	def test_of_my_rindex_a
 		array = ["A","B","C"]
-		assert_equal(0, array.my_index("a"))
-	end #test_of_my_index_a
+		assert_equal(0, array.my_rindex("a"))
+	end #test_of_my_rindex_a
 
-	def test_reverse_test_of_my_index_a
-		array = ["A","B","B","B","C","D","E"]
-		assert_equal(["E", "D", "C", "B", "B", "B", "A"], array.my_reverse())
-	end
+	def test_my_rindex_for_position_3_not_empty
+		array = ["A","B","D","D","E"]
+		assert_equal(1, array.my_rindex("B"))
+		assert_equal(3, array.my_rindex("D"))
+	end # test_my_rindex_for_position_3_not_empty
+
+	def test_reverse_index_B
+		array = ["A","B","D","D","E"]
+		assert_equal(1, array.my_rindex("B"))
+		assert_equal(3, array.my_rindex("D"))
+	end #test_reverse_index_B
 
 
 end # class
